@@ -37,19 +37,20 @@ Requires: python-crypto
 %endif
 
 # RHEL >=7
-%if 0%{?rhel} >= 7
-Requires: python2-cryptography
-%endif
+# %if 0%{?rhel} >= 7
+# Requires: python2-cryptography
+# %endif
 
 # RHEL > 5
 %if 0%{?rhel} && 0%{?rhel} > 5
-BuildRequires: python2-devel
-BuildRequires: python-setuptools
-Requires: PyYAML
-Requires: python-paramiko
-Requires: python-jinja2
-Requires: python-setuptools
-Requires: python-six
+BuildRequires: python3-devel
+BuildRequires: python3-setuptools
+Requires: python3-pyyaml
+Requires: python3-paramiko
+Requires: python3-jinja2
+Requires: python3-setuptools
+Requires: python3-six
+Requires: python3-cryptography
 %endif
 
 # FEDORA > 17
